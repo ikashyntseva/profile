@@ -1,0 +1,11 @@
+@import "variables";
+
+.page-footer {
+  height: 58px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: $light-color;
+  padding: 5px 20px;
+  box-sizing: border-box;
+}

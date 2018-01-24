@@ -1,0 +1,26 @@
+.contact {
+  display: flex;
+  align-items: center;
+
+  &--open:before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background-color: $green-color;
+    margin-right: 5px;
+  }
+}
+
+#contact-form {
+  display: none;
+  position: absolute;
+  bottom: 58px;
+  right: 0;
+  padding: 60px 0 20px;
+
+  &.contact-form--open {
+    display: block;
+  }
+}

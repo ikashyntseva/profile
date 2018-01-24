@@ -1,0 +1,20 @@
+@import "variables";
+
+.form-block__field {
+  margin-bottom: 15px;
+}
+
+#contact-form {
+  .form__btns {
+    text-align: right;
+  }
+  .btn--send {
+    display: inline-block;
+  }
+}
+
+.btn--close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

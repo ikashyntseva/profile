@@ -1,0 +1,95 @@
+@import "variables";
+
+.page-header {
+  background-color: $accent-color;
+  height: 58px;
+  padding: 5px 20px;
+
+  .avatar {
+    height: 58px;
+    width: 58px;
+    border-radius: 58px;
+    border: 4px solid $base-color;
+    box-sizing: border-box;
+
+    & > img {
+      border-radius: 100%;
+    }
+  }
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: none;
+  &__list {
+    padding-top: 5px;
+    background-color: $accent-color;
+    border-bottom: 1px solid darken($accent-color, 1.75);
+  }
+  &__link {
+    position: relative;
+    font: $base-font;
+    font-size: 18px;
+    color: $base-color;
+    padding: 19px 15px 21px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      background-color: $dark-color;
+      text-decoration: none;
+    }
+    &:active {
+      color: rgba($accent-color, 0.3);
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px solid rgba($base-color, 0.15);
+      border-top: 1px solid darken($accent-color, 10.75);
+      box-sizing: border-box;
+      position: absolute;
+      top: -2px;
+      left: 0;
+    }
+  }
+}
+.menu--open {
+  display: block;
+  position: static;
+}
+.menu__button {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 25px;
+  .icon-cross {
+    display: none;
+  }
+  &--close {
+    //margin-right: -27px;
+    .icon-burger {
+      display: none;
+    }
+    .icon-cross,
+    & + .menu {
+      display: block;
+    }
+  }
+  &:hover {
+    path {
+      fill: $dark-color;
+    }
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}

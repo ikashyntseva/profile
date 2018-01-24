@@ -1,0 +1,15 @@
+@import "variables";
+
+.info {
+  & .container {
+    padding: 20px;
+  }
+
+  .info__item--photo {
+    display: none;
+  }
+
+ .info__item--name {
+    margin-bottom: 5px;
+  }
+}
